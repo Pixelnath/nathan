@@ -1,0 +1,272 @@
+/* =====================================================
+   OLAKIZZY STYLES – PREMIUM STYLESHEET
+   Course: IFT203 – Introduction to Web
+   Purpose: Luxury Hair Styling & Barbing Website
+===================================================== */
+
+/* --------------------
+   GLOBAL RESET
+--------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------------
+   ROOT COLOURS
+--------------------- */
+:root {
+    --bg-primary: #0b1220;        /* Midnight Navy */
+    --bg-secondary: #102a43;      /* Deep Blue */
+    --bg-accent: #0f3d2e;         /* Emerald Green */
+    --gold: #d4af37;              /* Champagne Gold */
+    --text-main: #f8fafc;         /* Soft Ivory */
+    --text-muted: #cbd5e1;
+}
+
+/* --------------------
+   BODY
+--------------------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.75;
+}
+
+/* --------------------
+   HEADER & NAVIGATION
+--------------------- */
+.header {
+    background: linear-gradient(
+        90deg,
+        var(--bg-primary),
+        var(--bg-secondary)
+    );
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: var(--gold);
+    letter-spacing: 1px;
+}
+
+.nav a {
+    margin-left: 28px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: var(--gold);
+}
+
+/* --------------------
+   HERO SECTION
+--------------------- */
+.hero {
+    position: relative;
+    height: 92vh;
+    background: url('../images/hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    
+    
+    background: url(cutzhome.jpg) center/cover no-repeat ;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 650px;
+}
+
+.tagline {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 54px;
+    margin: 18px 0;
+}
+
+.hero p {
+    color: var(--text-muted);
+    margin-bottom: 35px;
+}
+
+/* --------------------
+   BUTTON
+--------------------- */
+.btn-primary {
+    display: inline-block;
+    padding: 14px 38px;
+    background: var(--gold);
+    color: var(--bg-primary);
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+}
+
+/* --------------------
+   CONTENT SECTIONS
+--------------------- */
+.intro {
+    padding: 90px 8%;
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        var(--bg-secondary),
+        var(--bg-primary)
+    );
+}
+
+.intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    color: var(--text-muted);
+}
+
+/* --------------------
+   FOOTER
+--------------------- */
+.footer {
+    background: var(--bg-primary);
+    padding: 25px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* --------------------
+   RESPONSIVE DESIGN
+--------------------- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+/* Contact Form Styling */
+#contact-form,
+form[action="https://api.web3forms.com/submit"] {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px 35px;
+    background: #111;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Inputs & Textarea */
+#contact-form input,
+#contact-form textarea,
+form[action="https://api.web3forms.com/submit"] input,
+form[action="https://api.web3forms.com/submit"] textarea {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 22px;
+    border: none;
+    border-radius: 8px;
+    background: #1c1c1c;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Placeholder Color */
+#contact-form input::placeholder,
+#contact-form textarea::placeholder,
+form[action="https://api.web3forms.com/submit"] input::placeholder,
+form[action="https://api.web3forms.com/submit"] textarea::placeholder {
+    color: #aaa;
+}
+
+/* Focus Effect */
+#contact-form input:focus,
+#contact-form textarea:focus,
+form[action="https://api.web3forms.com/submit"] input:focus,
+form[action="https://api.web3forms.com/submit"] textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(212,175,55,0.7);
+    background: #222;
+}
+
+/* Submit Button */
+#contact-form button,
+form[action="https://api.web3forms.com/submit"] button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #d4af37, #b8962e);
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+#contact-form button:hover,
+form[action="https://api.web3forms.com/submit"] button:hover {
+    background: linear-gradient(135deg, #e6c95c, #caa73d);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212,175,55,0.4);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    #contact-form,
+    form[action="https://api.web3forms.com/submit"] {
+        padding: 25px 20px;
+    }
+}
+/* Placeholder Styling */
+#contact-form input::placeholder,
+#contact-form textarea::placeholder,
+form[action="https://api.web3forms.com/submit"] input::placeholder,
+form[action="https://api.web3forms.com/submit"] textarea::placeholder {
+    color: #888;
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 0.3px;
+}
